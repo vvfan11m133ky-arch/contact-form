@@ -1,42 +1,53 @@
-// 必要な要素をidを使って取り出す
+// 必要な要素をidを使って認識
 const contactform = document.getElementById('contact-form');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email')
-const contact_typeInput = document.getElementById('contact_type')
-const datailInput = document.getElementById('detail')
+const contactTypeInput = document.getElementById('contact-type')
+const detailInput = document.getElementById('detail')
 const consentInput = document.getElementById('consent')
+//エラーメッセージ用
+const nameError = document.getElementById('name-error');
+const emailError = document.getElementById('email-error');
+const contactTypeError = document.getElementById('contact-type-error');
+const detailError = document.getElementById('detail-error');
+const consentError = document.getElementById('consent-error');
 
 // 送信ボタンが押されたのを認識
 contactform.addEventListener('submit', function (event) {
+    let hasEr = false;
     // 項目のチェック
     // お名前
     if (nameInput.value.trim() === "") {
-        alert("お名前を入力してください。");
-        event.preventDefault();
-        return;
-    }
+        nameError.textContent = "お名前を入力してください。";
+        hasEr = true;
+    } else { nameError.textContent = "" }
+
     // メールアドレス
     if (!emailInput.value.includes("@")) {
-        alert("メールアドレスの形式が正しくありません。");
-        event.preventDefault();
-        return;
-    }
+        emailError.textContent = "メールアドレスの形式が正しくありません。";
+        hasEr = true;
+    } else { emailError.textContent = "" }
+
     // お問い合わせの種類
-    if (contact_typeInput.value === "") {
-        alert("お問い合わせの種類を選択してください。");
-        event.preventDefault();
-        return;
-    }
+    if (contactTypeInput.value === "") {
+        contactTypeError.textContent = "お問い合わせの種類を選択してください。";
+        hasEr = true;
+    } else { contactTypeError.textContent = "" }
+
     // お問い合わせ内容
     if (detailInput.value.trim() === "") {
-        alert("お問い合わせ内容を入力してください。");
-        event.preventDefault();
-        return;
-    }
+        detailError.textContent = "お問い合わせ内容を入力してください。";
+        hasEr = true;
+    } else { detailError.textContent = "" }
+
     // 個人情報の取り扱いへの同意
     if (!consentInput.checked) {
-        alert("個人情報の取り扱いへの同意が必要です。");
+        consentError.textContent = "個人情報の取り扱いへの同意が必要です。";
+        hasEr = true;
+    } else { consentError.textContent = "" }
+
+    // すべて記入済みかの確認
+    if (hasEr === true) {
         event.preventDefault();
-        return;
     }
-})
+});
