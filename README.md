@@ -3,14 +3,14 @@
 実務でのフォーム制作を想定して
 フロントエンド(js)とバックエンド(php)でバリデーションを実装
 ## 使用技術
-**HTML**
-**CSS**
-**JavaScript**
+**HTML**<br>
+**CSS**<br>
+**JavaScript**<br>
 **PHP**
 ## 開発環境
-**OS:** Windows
-**Editor:** Visual Studio Code
-**PHP Execution:** VS Code 拡張機能を利用したローカルプレビュー環境
+**OS:** Windows<br>
+**Editor:** Visual Studio Code<br>
+**PHP Execution:** VS Code 拡張機能を利用したローカルプレビュー環境<br>
 **Version Control:** GitHub
 
 ## こだわりポイント
