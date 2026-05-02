@@ -39,7 +39,7 @@
             </p>
 
             <p><input type="checkbox" id="consent" name="consent" value="agree" required>
-                <label for="cosent">個人情報の取り扱いへの同意</label>
+                <label for="consent">個人情報の取り扱いへの同意</label>
                 <br><span id=consent-error class="error-message"></span>
             </p>
 
