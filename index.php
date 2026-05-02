@@ -14,17 +14,17 @@
             <p>下記項目を入力してください</p>
 
             <p><label for="name">お名前</label><br>
-                <input type="text" id="name" name="name" placeholder="姓もしくは会社名">
+                <input type="text" id="name" name="name" placeholder="姓もしくは会社名" required>
                 <br><span id=name-error class="error-message"></span>
             </p>
 
             <p><label for="email">メールアドレス</label><br>
-                <input type="email" id="email" name="email" placeholder="example@ex.co.jp">
+                <input type="email" id="email" name="email" placeholder="example@ex.co.jp" required>
                 <br><span id=email-error class="error-message"></span>
             </p>
 
             <p><label for="contact-type">お問い合わせの種類</label><br>
-                <select id="contact-type" name="contact-type">
+                <select id="contact-type" name="contact-type" required>
                     <option value="">--選択してください--</option>
                     <option value="production">制作のご依頼</option>
                     <option value="recruit">採用について</option>
@@ -34,11 +34,11 @@
             </p>
 
             <p><label for="detail">お問い合わせ内容</label><br>
-                <textarea id="detail" name="detail" value="a"></textarea>
+                <textarea id="detail" name="detail" value="a" required></textarea>
                 <br><span id=detail-error class="error-message"></span>
             </p>
 
-            <p><input type="checkbox" id="consent" name="consent" value="agree">
+            <p><input type="checkbox" id="consent" name="consent" value="agree" required>
                 <label for="cosent">個人情報の取り扱いへの同意</label>
                 <br><span id=consent-error class="error-message"></span>
             </p>
