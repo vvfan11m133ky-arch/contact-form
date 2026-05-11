@@ -26,9 +26,9 @@
             <p><label for="contact-type">お問い合わせの種類</label><br>
                 <select id="contact-type" name="contact-type" required>
                     <option value="">--選択してください--</option>
-                    <option value="production">制作のご依頼</option>
-                    <option value="recruit">採用について</option>
-                    <option value="other">その他</option>
+                    <option value="制作のご依頼">制作のご依頼</option>
+                    <option value="採用について">採用について</option>
+                    <option value="その他">その他</option>
                 </select>
                 <br><span id=contact-type-error class="error-message"></span>
             </p>

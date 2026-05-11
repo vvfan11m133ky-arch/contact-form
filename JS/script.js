@@ -13,7 +13,7 @@ const detailError = document.getElementById('detail-error');
 const consentError = document.getElementById('consent-error');
 
 // 送信ボタンが押されたのを認識
-contactform.addEventListener('submit', function (event) {
+contactform.addEventListener('submit', (event) => {
     let hasEr = false;
     // 項目のチェック
     // お名前
