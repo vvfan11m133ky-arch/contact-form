@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <title></title>
     <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/script.js" defer></script>
 </head>
 
 <body>
@@ -34,11 +36,11 @@
             </p>
 
             <p><label for="detail">お問い合わせ内容</label><br>
-                <textarea id="detail" name="detail" value="a" required></textarea>
+                <textarea id="detail" name="detail"></textarea>
                 <br><span id=detail-error class="error-message"></span>
             </p>
 
-            <p><input type="checkbox" id="consent" name="consent" value="agree" required>
+            <p><input type="checkbox" id="consent" name="consent">
                 <label for="consent">個人情報の取り扱いへの同意</label>
                 <br><span id=consent-error class="error-message"></span>
             </p>
@@ -47,7 +49,6 @@
         </form>
     </main>
     <footer></footer><!-- 後々作成 -->
-    <script src="JS/script.js"></script>
 </body>
 
 </html>
