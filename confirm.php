@@ -36,11 +36,11 @@ function ehn($str,)
         <p>お問い合わせの種類： <?php eh($contactType) ?></p>
         <p>内容： <?php ehn($detail) ?></p>
 
-        <!-- thanks.phpへデータを送るための、見えないフォーム -->
+        <!-- send.phpへデータを送るための、見えないフォーム -->
         <form action="send.php" method="POST" id="confirm-form">
             <input type="hidden" name="name" value="<?php eh($name); ?>">
             <input type="hidden" name="email" value="<?php eh($email); ?>">
-            <input type="hidden" name="contactType" value="<?php eh($contactType); ?>">
+            <input type="hidden" name="contact-type" value="<?php eh($contactType); ?>">
             <input type="hidden" name="detail" value="<?php ehn($detail); ?>">
             <!-- 修正用の戻るボタン -->
             <button type="button" onclick="history.back()">修正する</button>
