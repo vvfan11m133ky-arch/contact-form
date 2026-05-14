@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>お問い合わせフォーム</title>
     <link rel="stylesheet" href="CSS/style.css">
     <script src="JS/script.js" defer></script>
 </head>
@@ -16,17 +16,17 @@
             <p>下記項目を入力してください</p>
 
             <p><label for="name">お名前</label><br>
-                <input type="text" id="name" name="name" placeholder="姓もしくは会社名" required>
+                <input type="text" id="name" name="name" placeholder="姓もしくは会社名">
                 <br><span id=name-error class="error-message"></span>
             </p>
 
             <p><label for="email">メールアドレス</label><br>
-                <input type="email" id="email" name="email" placeholder="example@ex.co.jp" required>
+                <input type="email" id="email" name="email" placeholder="example@ex.co.jp">
                 <br><span id=email-error class="error-message"></span>
             </p>
 
             <p><label for="contact-type">お問い合わせの種類</label><br>
-                <select id="contact-type" name="contact-type" required>
+                <select id="contact-type" name="contact-type">
                     <option value="">--選択してください--</option>
                     <option value="制作のご依頼">制作のご依頼</option>
                     <option value="採用について">採用について</option>
