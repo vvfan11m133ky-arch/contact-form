@@ -1,4 +1,9 @@
 <?php
+// 直接アクセスの対策
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    header("Location: index.php");
+    exit;
+}
 /*htmlspecialchars()で悪意のあるプログラムを
   無害に(サニタイズ)する関数*/
 function h($str)
@@ -36,7 +41,7 @@ if (empty($consent)) {
 }
 
 if (!empty($errors)) {
-    echo "<h2>入力内容に不備があります。</h2>";
+    echo "<h2>入力内容に以下の不備があります。</h2>";
     foreach ($errors as $error) {
         echo "<p>$error</p>";
     }
@@ -49,7 +54,7 @@ if (!empty($errors)) {
 
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>内容確認</title>
     <link rel="stylesheet href=" CSS/style.css">
 
     <script src="JS/script.js" defer></script>
