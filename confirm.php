@@ -55,8 +55,7 @@ if (!empty($errors)) {
 <head>
     <meta charset="UTF-8">
     <title>内容確認</title>
-    <link rel="stylesheet href=" CSS/style.css">
-
+    <link rel="stylesheet" href="CSS/style.css">
     <script src="JS/script.js" defer></script>
 </head>
 
@@ -64,23 +63,39 @@ if (!empty($errors)) {
     <header></header><!-- 後々作成 -->
     <main>
         <!-- 確認表示 -->
-        <h2>お問い合わせ内容の確認</h2>
-        <p>お名前： <?php echo $name ?></p>
-        <p>メールアドレス： <?php echo $email ?></p>
-        <p>お問い合わせの種類： <?php echo $contactType ?></p>
-        <p>内容： <?php echo $detail ?></p>
+        <div id=check>
+            <h2>お問い合わせ内容の確認</h2>
+            <table>
+                <tr>
+                    <th>お名前</th>
+                    <td><?php echo $name ?></td>
+                </tr>
+                <tr>
+                    <th>メールアドレス</th>
+                    <td><?php echo $email ?></td>
+                </tr>
+                <tr>
+                    <th>お問い合わせの種類</th>
+                    <td><?php echo $contactType ?></td>
+                </tr>
+                <tr>
+                    <th>内容</th>
+                    <td><?php echo $detail ?></td>
+                </tr>
+            </table>
 
-        <!-- send.phpへデータを送るための、見えないフォーム -->
-        <form action="send.php" method="POST" id="confirm-form">
-            <input type="hidden" name="name" value="<?php echo $name; ?>">
-            <input type="hidden" name="email" value="<?php echo $email; ?>">
-            <input type="hidden" name="contact-type" value="<?php echo $contactType; ?>">
-            <input type="hidden" name="detail" value="<?php echo $detail; ?>">
-            <!-- 修正用の戻るボタン -->
-            <button type="button" onclick="history.back()">修正する</button>
-            <!-- 確定ボタン -->
-            <button type="submit" id="send-button">この内容で送信する</button>
-        </form>
+            <!-- send.phpへデータを送るための、見えないフォーム -->
+            <form action="send.php" method="POST" id="confirm-form">
+                <input type="hidden" name="name" value="<?php echo $name; ?>">
+                <input type="hidden" name="email" value="<?php echo $email; ?>">
+                <input type="hidden" name="contact-type" value="<?php echo $contactType; ?>">
+                <input type="hidden" name="detail" value="<?php echo $detail; ?>">
+                <!-- 修正用の戻るボタン -->
+                <button type="button" id="back-button" onclick="history.back()">修正する</button>
+                <!-- 確定ボタン -->
+                <button type="submit" id="send-button">この内容で送信する</button>
+            </form>
+        </div>
     </main>
     <footer></footer><!-- 後々作成 -->
 </body>

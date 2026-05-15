@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/style.css">
     <title>送信完了</title>
 </head>
 
