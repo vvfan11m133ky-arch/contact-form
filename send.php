@@ -27,7 +27,7 @@ $headers = "From: {$email}";
 // 送信の設定
 mb_language("japanese");
 mb_internal_encoding("UTF-8");
-$result = false;
+$result = true;
 // $result = mb_send_mail($to, $subject, $body, $headers);
 ?>
 <!DOCTYPE html>
